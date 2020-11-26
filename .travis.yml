@@ -12,7 +12,7 @@ before_install:
 
 script:
   # - go test -race -coverprofile=coverage.txt -covermode=atomic
-  - ginkgo -reportFile junit-report.xml -cover c.out
+  - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
   - sonar-scanner
 
 addons:
