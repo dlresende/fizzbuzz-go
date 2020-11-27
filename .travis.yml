@@ -11,8 +11,9 @@ before_install:
   - go get github.com/onsi/ginkgo/ginkgo
 
 script:
-  # - go test -race -coverprofile=coverage.txt -covermode=atomic
-  - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
+  # - go test -race -coverprofile=coverage.txt -covermode=atomic 
+  - go test -coverprofile=c.out -json > report.json
+  # - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
   - sonar-scanner
 
 addons:
