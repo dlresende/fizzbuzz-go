@@ -14,6 +14,8 @@ script:
   # - go test -race -coverprofile=coverage.txt -covermode=atomic 
   - go test -coverprofile=c.out -json > report.json
   # - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
+  - go vet -json > vet.json
+  - gometalinter --json --aggregate > gometalinter.json 2>/dev/null
   - sonar-scanner
 
 addons:
