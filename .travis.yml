@@ -1,11 +1,20 @@
 ---
 language: go
 
+git:
+  depth: false
+
 go:
   - stable
 
-script:
-  - go test -race -coverprofile=coverage.txt -covermode=atomic
+before_install:
+  - go get github.com/onsi/ginkgo/ginkgo
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+script:
+  # - go test -race -coverprofile=coverage.txt -covermode=atomic
+  - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
+  - sonar-scanner
+
+addons:
+  sonarcloud:
+    organization: "dlresende"
