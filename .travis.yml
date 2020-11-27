@@ -15,7 +15,7 @@ script:
   - go test -coverprofile=c.out -json > report.json
   # - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
   - go vet -json > vet.json
-  - gometalinter --json --aggregate > gometalinter.json 2>/dev/null
+  - golangci-lint run ./... --out-format checkstyle > golangci-lint.xml
   - sonar-scanner
 
 addons:
