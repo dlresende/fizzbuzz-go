@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/dlresende/fizzbuzz-go.svg?branch=main)](https://travis-ci.com/dlresende/fizzbuzz-go)
-[![codecov](https://codecov.io/gh/dlresende/fizzbuzz-go/branch/main/graph/badge.svg)](https://codecov.io/gh/dlresende/fizzbuzz-go)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=dlresende_fizzbuzz-go&metric=coverage)](https://sonarcloud.io/dashboard?id=dlresende_fizzbuzz-go)
 
 # Fizzbuzz
 
