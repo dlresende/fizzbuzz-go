@@ -17,6 +17,7 @@ script:
   # - ginkgo -reportFile junit-report.xml  -cover -coverprofile c.out
   - go vet -json > vet.json
   - golangci-lint run ./... --out-format checkstyle > golangci-lint.xml
+  - golint ./... > golint.out
   - sonar-scanner
 
 addons:
